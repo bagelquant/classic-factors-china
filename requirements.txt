@@ -1,3 +1,4 @@
 bagel-factor==0.0.2
 sqlalchemy==2.0.41
 pymysql==1.1.1
+pandas==2.2.3
