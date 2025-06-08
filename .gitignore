@@ -195,3 +195,6 @@ cython_debug/
 
 .DS_Store
 config.json
+
+# Add data files
+data/
