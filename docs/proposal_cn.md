@@ -56,7 +56,7 @@
 
 项目结构如下：
 
-```
+```plaintext
 project_root/
 ├── data/                  # CSV 文件目录
 ├── docs/                  # 文档文件

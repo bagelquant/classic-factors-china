@@ -46,8 +46,8 @@ Data will be retrieved using the [Tushare API](https://tushare.pro) and stored i
 - For classical factor models, the construction methods will follow the original papers.
 
 > [!NOTE]
-> Reasons for only including stocks listed on the Main Board is to ensure all stocks are investable for individual 
-> investors. Stocks listed on the SME Board and ChiNext Board are often subject to stricter trading restrictions, 
+> Reasons for only including stocks listed on the Main Board is to ensure all stocks are investable for individual
+> investors. Stocks listed on the SME Board and ChiNext Board are often subject to stricter trading restrictions,
 > which may not be suitable for small size portfolios.
 
 ## Reporting and Visualization
@@ -61,7 +61,7 @@ Interactive reporting and visualization will be implemented using Streamlit. The
 
 The project will be structured as follows:
 
-```
+```plaintext
 project_root/
 ├── data/                  # Directory for CSV files
 ├── docs/                  # Documentation files
