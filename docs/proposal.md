@@ -17,7 +17,6 @@ This project aims to systematically analyze the performance of classic investmen
     - Value
     - Quality
     - Investment
-    - Profitability
 - **Classical Factor Models**:
   - Fama-French 3-Factor Model (1993)
   - Carhart 4-Factor Model (1997)

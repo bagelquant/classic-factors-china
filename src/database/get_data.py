@@ -57,9 +57,9 @@ def get_adj_factor(engine: Engine,
 
 
 def get_fundamental(engine: Engine,
-                     table_name: str,
-                     columns: Iterable[str],
-                     ts_codes: Iterable[str]) -> pd.DataFrame:
+                    table_name: str,
+                    columns: Iterable[str],
+                    ts_codes: Iterable[str]) -> pd.DataFrame:
     """
     Retrieve fundamental data from the database.
     :param engine: database engine object
@@ -76,3 +76,18 @@ def get_fundamental(engine: Engine,
     # change f_ann_date index name to trade_date
     df.index.names = ["ts_code", "trade_date"]
     return df
+
+
+def get_daily_basic(engine: Engine,
+                    ts_codes: Iterable[str]) -> pd.DataFrame:
+    """
+    Retrieve daily basic data from the database.
+    :param engine: database engine object
+    :param ts_codes: iterable of stock codes to filter the data
+    """
+    query = f"""
+            SELECT * FROM daily_basic
+            WHERE ts_code IN {tuple(ts_codes) if ts_codes else '()'}
+            ORDER BY ts_code, trade_date
+            """
+    return pd.read_sql(query, engine, parse_dates=["trade_date"], index_col=["ts_code", "trade_date"])

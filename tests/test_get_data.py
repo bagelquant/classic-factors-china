@@ -6,7 +6,7 @@ Author: Yanzhong(Eric) Huang
 
 from unittest import TestCase
 from src.database import get_engine
-from src.database import get_stock_basic, get_daily, get_adj_factor, get_fundamental
+from src.database import get_stock_basic, get_daily, get_adj_factor, get_fundamental, get_daily_basic
 
 
 class TestGetData(TestCase):
@@ -37,3 +37,8 @@ class TestGetData(TestCase):
                                            columns=["total_revenue", "basic_eps"],
                                            ts_codes=["000001.SZ", "600000.SH"])
         print(fundamental_data)
+
+    def test_get_daily_basic(self):
+        print("\n======Testing get_daily_basic function======")
+        daily_basic_data = get_daily_basic(self.engine, ts_codes=["000001.SZ", "600000.SH"])
+        print(daily_basic_data)
