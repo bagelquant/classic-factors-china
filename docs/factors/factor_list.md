@@ -31,11 +31,13 @@ Test list:
 
 ### Size
 
-- `fc`: free float market capitalization
-- `mc`: total market capitalization
-- `fc_mc`: free float market capitalization / total market capitalization
-- `ln_fc`: ln(fc)
-- `ln_mc`: ln(total market capitalization)
+Details: [Size Factor](size.md)
+
+- `circ_mv`: Free Float Market Capitalization
+- `total_mv`: Total Market Capitalization
+- `free_to_total_market_cap`: free float market capitalization / total market capitalization
+- `ln_free_market_cap`: logarithm of Free Market Capitalization
+- `ln_total_market_cap`: logarithm of Total Market Capitalization
 
 ### Value
 
